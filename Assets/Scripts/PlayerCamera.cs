@@ -56,7 +56,7 @@ public class PlayerCamera : MonoBehaviour
 
     void Update()
     {
-
+        LookAround();
         if (isSprinting)
             targetFov = normalFOV * 1.2f;
         else
@@ -67,7 +67,6 @@ public class PlayerCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        LookAround();
         HeadBobAndTilt();
         CameraMoveTilt();
         FovManipulation();
