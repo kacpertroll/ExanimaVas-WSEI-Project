@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -6,19 +7,17 @@ public class PuzzleCameraHandler : MonoBehaviour
     public static PuzzleCameraHandler Instance { get; private set; }
 
     [Header("Cameras")]
-    [SerializeField] private CinemachineCamera fppCamera;
+    [SerializeField] private CinemachineCamera playerCamera;
 
-    [Header("Player References")]
-    [SerializeField] private PlayerInteraction playerInteraction;
-    [SerializeField] private MonoBehaviour playerMovement; // drag your movement script here
+    [Header("Exit Input")]
+    [SerializeField] private KeyCode exitKey = KeyCode.Escape;
 
-    [Header("Timing")]
-    [SerializeField] private float transitionDuration = 0.75f;
+    [Header("Player Controllers")]
+    [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerCamera _playerCam;
 
-    private const int PRIORITY_HIGH = 20;
-    private const int PRIORITY_LOW = 10;
-
-    private PuzzleBase _activePuzzle;
+    private CinemachineCamera _activePuzzleCamera;
+    public bool _inPuzzle;
 
     void Awake()
     {
@@ -26,43 +25,34 @@ public class PuzzleCameraHandler : MonoBehaviour
         Instance = this;
     }
 
-    public void EnterPuzzle(PuzzleBase puzzle)
+    void Update()
     {
-        if (_activePuzzle != null) return; // already in a puzzle
-        _activePuzzle = puzzle;
+        if (_inPuzzle && Input.GetKeyDown(exitKey))
+            ExitPuzzle();
+    }
 
-        // Cinemachine handles the blend automatically based on priority
-        puzzle.PuzzleCamera.Priority = PRIORITY_HIGH;
-        fppCamera.Priority = PRIORITY_LOW;
+    public void EnterPuzzle(CinemachineCamera puzzleCamera)
+    {
+        if (_inPuzzle) return;
 
-        // Lock player
-        playerInteraction.enabled = false;
-        playerMovement.enabled = false;
+        _activePuzzleCamera = puzzleCamera;
+        _activePuzzleCamera.Priority = playerCamera.Priority + 10;
+        _inPuzzle = true;
+        _playerCam.enabled = false;
+        _playerMovement.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
 
-        // Wait for camera to finish panning, then show UI
-        Invoke(nameof(ShowPuzzleUI), transitionDuration);
     }
 
     public void ExitPuzzle()
     {
-        if (_activePuzzle == null) return;
+        if (!_inPuzzle) return;
 
-        _activePuzzle.Hide();
-        _activePuzzle.PuzzleCamera.Priority = PRIORITY_LOW;
-        fppCamera.Priority = PRIORITY_HIGH;
-
-        var exiting = _activePuzzle;
-        _activePuzzle = null;
-
-        // Restore player after camera pans back
-        Invoke(nameof(RestorePlayer), transitionDuration);
-    }
-
-    void ShowPuzzleUI() => _activePuzzle?.Show();
-
-    void RestorePlayer()
-    {
-        playerInteraction.enabled = true;
-        playerMovement.enabled = true;
+        _activePuzzleCamera.Priority = playerCamera.Priority - 10;
+        _activePuzzleCamera = null;
+        _inPuzzle = false;
+        _playerCam.enabled = true;
+        _playerMovement.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

@@ -4,39 +4,42 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField] private float interactRange = 3f;
-    [SerializeField] private LayerMask interactableMask;
-    [SerializeField] private TextMeshProUGUI promptText;
-
-    private CinemachineCamera _cam;
-    private IInteractable _currentTarget;
-
-    void Start() => _cam = GetComponentInChildren<CinemachineCamera>();
+    [SerializeField] private CinemachineCamera playerCam;
+    [SerializeField] private float range = 3f;
+    [SerializeField] private LayerMask interactableLayer;
+    [SerializeField] private KeyCode interactKey = KeyCode.E;
+    [SerializeField] private TextMeshProUGUI interactUI;
+    [SerializeField] private string interactText;
+    [SerializeField] private PuzzleCameraHandler puzzleCameraHandler;
 
     void Update()
     {
         ScanForInteractable();
-        if (Input.GetKeyDown(KeyCode.E) && _currentTarget != null)
-            _currentTarget.Interact();
     }
 
     void ScanForInteractable()
     {
-        Ray ray = new Ray(_cam.transform.position, _cam.transform.forward);
+        Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableMask))
+        if (Physics.Raycast(ray, out RaycastHit hit, range, interactableLayer))
         {
-            var target = hit.collider.GetComponent<IInteractable>();
-            if (target != null)
+            var puzzle = hit.collider.GetComponent<PuzzleObject>();
+            if (puzzle != null)
             {
-                _currentTarget = target;
-                promptText.text = target.GetPromptText();
-                promptText.gameObject.SetActive(true);
+                interactUI.text = interactText;
+                interactUI.gameObject.SetActive(true);
+
+                if (Input.GetKeyDown(interactKey))
+                    puzzle.Activate();
+
+                if (puzzleCameraHandler._inPuzzle)
+                {
+                    interactUI.gameObject.SetActive(false);
+                }
                 return;
             }
         }
 
-        _currentTarget = null;
-        promptText.gameObject.SetActive(false);
+        interactUI.gameObject.SetActive(false);
     }
 }
