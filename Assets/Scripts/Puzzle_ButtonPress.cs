@@ -8,13 +8,14 @@ public class Puzzle_ButtonPress : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetMouseButtonDown(0)) return;
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit) && PuzzleCameraHandler.Instance._inPuzzle)
+        if (Input.GetMouseButtonDown(0) && PuzzleCameraHandler.Instance._inPuzzle)
         {
-            if (hit.collider.gameObject == gameObject)
-                puzzle.Solve();
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                if (hit.collider.gameObject == gameObject)
+                    puzzle.Solve();
+            }
         }
     }
 
@@ -31,7 +32,7 @@ public class Puzzle_ButtonPress : MonoBehaviour
 
     public void OpenGate()
     {
-        gameObject.GetComponent<Animator>().SetTrigger("press");
+        GetComponent<Animator>().SetTrigger("press");
         gateAnimator.SetBool("open", true);
     }
 }
