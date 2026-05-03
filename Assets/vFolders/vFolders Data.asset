@@ -20,6 +20,7 @@ MonoBehaviour:
     - f442b22e590a54044b1694bda0c05ef6
     - e62d214d60c2dd2478dceb62eb316a4f
     - 255ce25203ab56749b17198b04749a22
+    - cbbf0e9ae002c4744b8123cb06a09942
     values:
     - iconNameOrGuid: cs Script Icon
       colorIndex: 0
@@ -45,8 +46,13 @@ MonoBehaviour:
       colorIndex: 0
       isIconRecursive: 0
       isColorRecursive: 0
+    - iconNameOrGuid: Texture Icon
+      colorIndex: 0
+      isIconRecursive: 0
+      isColorRecursive: 0
   bookmarks:
   - guid: f7ed8e0c91843dd46b4b6f735ddf8da9
   - guid: 9c53962885c2c4f449125a979d6ad240
   - guid: b1cf552231c55c745a8cf4c836215302
   - guid: f442b22e590a54044b1694bda0c05ef6
+  - guid: cbbf0e9ae002c4744b8123cb06a09942

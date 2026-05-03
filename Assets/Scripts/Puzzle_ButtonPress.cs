@@ -22,12 +22,12 @@ public class Puzzle_ButtonPress : MonoBehaviour
     void OnMouseEnter()
     {
         if (PuzzleCameraHandler.Instance._inPuzzle)
-            GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
+            GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
     }
 
     void OnMouseExit()
     {
-        GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+        GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
     }
 
     public void OpenGate()

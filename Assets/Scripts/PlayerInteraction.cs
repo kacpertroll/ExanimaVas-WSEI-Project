@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public static PlayerInteraction Instance { get; private set; }
+
     [SerializeField] private CinemachineCamera playerCam;
     [SerializeField] private float range = 3f;
     [SerializeField] private LayerMask interactableLayer;
@@ -30,7 +32,9 @@ public class PlayerInteraction : MonoBehaviour
                 interactUI.gameObject.SetActive(true);
 
                 if (Input.GetKeyDown(interactKey))
+                {
                     puzzle.Activate();
+                }
 
                 if (puzzleCameraHandler._inPuzzle)
                 {

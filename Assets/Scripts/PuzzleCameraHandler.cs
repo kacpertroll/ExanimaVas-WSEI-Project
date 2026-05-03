@@ -28,7 +28,9 @@ public class PuzzleCameraHandler : MonoBehaviour
     void Update()
     {
         if (_inPuzzle && Input.GetKeyDown(exitKey))
+        {
             ExitPuzzle();
+        }
     }
 
     public void EnterPuzzle(CinemachineCamera puzzleCamera)
