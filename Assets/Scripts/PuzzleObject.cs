@@ -19,7 +19,10 @@ public class PuzzleObject : MonoBehaviour
             Debug.Log("Already solved");
             return;
         }
-        PuzzleCameraHandler.Instance.EnterPuzzle(puzzleCamera);
+        if (puzzleCamera != null)
+        {
+            PuzzleCameraHandler.Instance.EnterPuzzle(puzzleCamera);
+        }
     }
 
     public void Solve()
