@@ -42,6 +42,21 @@ public class PlayerInteraction : MonoBehaviour
                 }
                 return;
             }
+
+            var slot = hit.collider.GetComponent<DiskSlotInteractable>();
+
+            if (slot != null)
+            {
+                interactUI.text = interactText;
+                interactUI.gameObject.SetActive(true);
+
+                if (Input.GetKeyDown(interactKey))
+                {
+                    slot.Interact();
+                }
+
+                return;
+            }
         }
 
         interactUI.gameObject.SetActive(false);
