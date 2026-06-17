@@ -57,6 +57,16 @@ public class PlayerInteraction : MonoBehaviour
 
                 return;
             }
+
+            var interact = hit.collider.GetComponent<InstantInteract>();
+
+            if (interact != null)
+            {
+                if (Input.GetKeyDown(interactKey))
+                {
+                    interact.React();
+                }
+            }
         }
 
         interactUI.gameObject.SetActive(false);
