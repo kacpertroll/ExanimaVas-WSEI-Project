@@ -35,12 +35,6 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     puzzle.Activate();
                 }
-
-                if (puzzleCameraHandler._inPuzzle)
-                {
-                    interactUI.gameObject.SetActive(false);
-                }
-                return;
             }
 
             var slot = hit.collider.GetComponent<DiskSlotInteractable>();
@@ -54,19 +48,26 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     slot.Interact();
                 }
-
-                return;
             }
 
             var interact = hit.collider.GetComponent<InstantInteract>();
 
             if (interact != null)
             {
+                interactUI.text = interactText;
+                interactUI.gameObject.SetActive(true);
+
                 if (Input.GetKeyDown(interactKey))
                 {
                     interact.React();
                 }
             }
+            if (puzzleCameraHandler._inPuzzle)
+            {
+                interactUI.gameObject.SetActive(false);
+            }
+
+            return;
         }
 
         interactUI.gameObject.SetActive(false);
