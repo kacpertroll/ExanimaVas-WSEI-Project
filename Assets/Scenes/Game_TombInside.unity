@@ -44851,6 +44851,10 @@ PrefabInstance:
       propertyPath: puzzleCameraHandler
       value: 
       objectReference: {fileID: 1649053949}
+    - target: {fileID: 6176781806384428057, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
+      propertyPath: interactableLayer.m_Bits
+      value: 832
+      objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -77490,7 +77494,7 @@ MonoBehaviour:
   onSolved:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1649053951}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: CommentMessage
         m_Mode: 5
@@ -78465,8 +78469,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1649053950}
   - component: {fileID: 1649053949}
-  - component: {fileID: 1649053952}
   - component: {fileID: 1649053951}
+  - component: {fileID: 1649053952}
   m_Layer: 0
   m_Name: Script Managers
   m_TagString: Untagged

@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     // Tego u�ywamy jako pierwsz� wiadomo�c w kolejce. To tworzy kolejk� aktualnych wiadomo�ci, kt�r� kontynuujemy poprzez u�yhcie CommentDelayMessage
