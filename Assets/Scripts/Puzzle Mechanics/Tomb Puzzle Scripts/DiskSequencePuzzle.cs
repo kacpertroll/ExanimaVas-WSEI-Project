@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DiskSequencePuzzle : MonoBehaviour
 {
     [SerializeField] private PuzzleObject puzzle;
     [SerializeField] private DiskSlotInteractable[] slotsInCorrectOrder;
     public bool HasAnyProgress => _insertedOrder.Count > 0;
+    [Header("Wrong Order Events")]
+    [SerializeField] private UnityEvent wrongOrder;
 
     private readonly List<DiskSlotInteractable> _insertedOrder = new List<DiskSlotInteractable>();
 
@@ -25,6 +28,7 @@ public class DiskSequencePuzzle : MonoBehaviour
         }
         else
         {
+            wrongOrder?.Invoke();
             ResetPuzzle();
         }
     }

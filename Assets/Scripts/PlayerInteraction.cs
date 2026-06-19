@@ -50,7 +50,7 @@ public class PlayerInteraction : MonoBehaviour
 
             var slot = hit.collider.GetComponent<DiskSlotInteractable>();
 
-            if (slot != null)
+            if (slot != null && puzzleCameraHandler._inPuzzle)
             {
                 interactUI.text = interactText;
                 interactUI.gameObject.SetActive(true);

@@ -76215,7 +76215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalPosition.y
@@ -76223,11 +76223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.12
+      value: -35.4
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071075
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalRotation.x
@@ -76235,7 +76235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071061
+      value: -0.0000004917383
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalRotation.z
@@ -76247,7 +76247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8155598571056027717, guid: 30fbe158c1ac7b74e8571ac176566758, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -84749,7 +84749,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -110561,8 +110561,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248482107}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071061, z: 0, w: 0.7071075}
-  m_LocalPosition: {x: -50.96, y: 1.5, z: 10.12}
+  m_LocalRotation: {x: 0, y: -0.0000004917383, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: -35.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188148,7 +188148,7 @@ PrefabInstance:
       objectReference: {fileID: 2075299379}
     - target: {fileID: 1454467637252399210, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_VersionIndex
-      value: 548
+      value: 551
       objectReference: {fileID: 0}
     - target: {fileID: 1641118828955983699, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Name
@@ -188160,7 +188160,7 @@ PrefabInstance:
       objectReference: {fileID: 1999720845}
     - target: {fileID: 1912157678329952844, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_VersionIndex
-      value: 513
+      value: 516
       objectReference: {fileID: 0}
     - target: {fileID: 2248670506839251066, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh
@@ -188168,7 +188168,7 @@ PrefabInstance:
       objectReference: {fileID: 592212861}
     - target: {fileID: 2248670506839251066, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_VersionIndex
-      value: 1542
+      value: 1545
       objectReference: {fileID: 0}
     - target: {fileID: 2477501542375162199, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh
@@ -188232,12 +188232,48 @@ PrefabInstance:
       objectReference: {fileID: 1030863029}
     - target: {fileID: 3913536719729625197, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_VersionIndex
-      value: 1117
+      value: 1120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1649053952}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CommentMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Something's wrong... Maybe I need to place them in some specific way?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346848610545714946, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: wrongOrder.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4610626915114241797, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: onSolved.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1434900095}
+    - target: {fileID: 4610626915114241797, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: onSolved.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4827753881051630572, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -188260,7 +188296,7 @@ PrefabInstance:
       objectReference: {fileID: 54121467}
     - target: {fileID: 5760077356967706976, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_VersionIndex
-      value: 2509
+      value: 2512
       objectReference: {fileID: 0}
     - target: {fileID: 5822770379091259217, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh
@@ -188272,7 +188308,7 @@ PrefabInstance:
       objectReference: {fileID: 566825373}
     - target: {fileID: 6073732430422113884, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_VersionIndex
-      value: 548
+      value: 551
       objectReference: {fileID: 0}
     - target: {fileID: 6103948900610028175, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh
@@ -188340,7 +188376,7 @@ PrefabInstance:
       objectReference: {fileID: 312841918}
     - target: {fileID: 9161569194943877628, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_VersionIndex
-      value: 548
+      value: 551
       objectReference: {fileID: 0}
     - target: {fileID: 9202069343917617200, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh

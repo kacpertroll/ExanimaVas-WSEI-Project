@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Game_MainMenu.unity
+    guid: ace384dee16966e4d9da67e26f9a72e2
+  - enabled: 1
     path: Assets/Scenes/Game_Path0.unity
     guid: f06a6fe5da686f945ac50359a7b801e5
   - enabled: 1
@@ -14,12 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game_TombInside.unity
     guid: deeff04b18e28d6438fb90e90436f16f
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Scenes/Game_ChurchMain.unity
-    guid: 4f5a5d54563bcef4d943e42391ff919a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
