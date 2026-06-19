@@ -23938,7 +23938,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292848407}
   m_LocalRotation: {x: 0.60876125, y: -0, z: -0, w: 0.7933535}
-  m_LocalPosition: {x: 0, y: 0, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0, z: 0.051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23946,7 +23946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.665}
+  m_AnchoredPosition: {x: 0, y: 0.676}
   m_SizeDelta: {x: 1, y: 1.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292848409
@@ -23969,9 +23969,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Interact to
+  m_text: 'St. Alex
 
-    Read Text'
+    Gommery
+
+
+    Parish Priest'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ced77ef682cb0f41a3e7e982cf46a7b, type: 2}
   m_sharedMaterial: {fileID: 6987666818532015733, guid: 6ced77ef682cb0f41a3e7e982cf46a7b, type: 2}
@@ -23998,8 +24001,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 1.8
+  m_fontSizeBase: 1.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24011,7 +24014,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -10.16
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -188130,6 +188133,15 @@ PrefabInstance:
       propertyPath: emptyHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1649053952}
+    - target: {fileID: 82696708354611570, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: partHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: I'm missing a disk... It must be around here somewhere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 82696708354611570, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: emptyHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: These look like they can hold something. Maybe something around here
+        will help.
+      objectReference: {fileID: 0}
     - target: {fileID: 129546756916510773, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -188182,6 +188194,15 @@ PrefabInstance:
       propertyPath: emptyHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1649053952}
+    - target: {fileID: 2852192960954855550, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: partHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: I'm missing a disk... It must be around here somewhere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852192960954855550, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: emptyHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: These look like they can hold something. Maybe something around here
+        will help.
+      objectReference: {fileID: 0}
     - target: {fileID: 3116120960847972715, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.888
@@ -188370,6 +188391,15 @@ PrefabInstance:
       propertyPath: emptyHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1649053952}
+    - target: {fileID: 8583373649227567928, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: partHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: I'm missing a disk... It must be around here somewhere.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583373649227567928, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
+      propertyPath: emptyHanded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: These look like they can hold something. Maybe something around here
+        will help.
+      objectReference: {fileID: 0}
     - target: {fileID: 9161569194943877628, guid: df8049bf6ad5897439ddf3c4dfb11f28, type: 3}
       propertyPath: m_Mesh
       value: 
