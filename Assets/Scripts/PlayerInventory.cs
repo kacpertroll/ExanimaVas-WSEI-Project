@@ -5,25 +5,26 @@ public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory Instance;
 
-    private List<DiskItem> disks = new List<DiskItem>();
+    public readonly List<DiskType> _heldDisks = new List<DiskType>();
 
     void Awake()
     {
         Instance = this;
     }
 
-    public void AddDisk(DiskItem disk)
+    public void AddDisk(DiskType disk)
     {
-        disks.Add(disk);
+        if (!_heldDisks.Contains(disk))
+            _heldDisks.Add(disk);
     }
 
-    public DiskItem GetDisk()
+    public void RemoveDisk(DiskType disk)
     {
-        if (disks.Count == 0) return null;
+        _heldDisks.Remove(disk);
+    }
 
-        DiskItem disk = disks[0];
-        disks.RemoveAt(0);
-
-        return disk;
+    public bool HasDisk(DiskType disk)
+    {
+        return _heldDisks.Contains(disk);
     }
 }

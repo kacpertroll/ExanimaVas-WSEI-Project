@@ -21,7 +21,18 @@ public class PlayerInteraction : MonoBehaviour
 
     void ScanForInteractable()
     {
-        Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
+        Ray ray;
+
+        if (puzzleCameraHandler._inPuzzle)
+        {
+            // W puzzlu celujemy myszk¹ po ekranie, nie kierunkiem kamery
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
+        else
+        {
+            // Poza puzzlem standardowy raycast ze œrodka ekranu (kierunek kamery)
+            ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
+        }
 
         if (Physics.Raycast(ray, out RaycastHit hit, range, interactableLayer))
         {
@@ -50,6 +61,19 @@ public class PlayerInteraction : MonoBehaviour
                 }
             }
 
+            var pickup = hit.collider.GetComponent<DiskPickup>();
+
+            if (pickup != null)
+            {
+                interactUI.text = interactText;
+                interactUI.gameObject.SetActive(true);
+
+                if (Input.GetKeyDown(interactKey))
+                {
+                    pickup.Interact();
+                }
+            }
+
             var interact = hit.collider.GetComponent<InstantInteract>();
 
             if (interact != null)
@@ -61,10 +85,6 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     interact.React();
                 }
-            }
-            if (puzzleCameraHandler._inPuzzle)
-            {
-                interactUI.gameObject.SetActive(false);
             }
 
             return;

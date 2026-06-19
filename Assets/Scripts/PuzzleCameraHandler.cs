@@ -19,6 +19,8 @@ public class PuzzleCameraHandler : MonoBehaviour
     private CinemachineCamera _activePuzzleCamera;
     public bool _inPuzzle;
 
+    public CinemachineCamera ActivePuzzleCamera => _activePuzzleCamera;
+
     void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
